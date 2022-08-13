@@ -411,11 +411,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-icon {
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-check:checked + .check-text span {
   background-color: var(--blue-text-color);
@@ -755,10 +755,13 @@ img {
   fill: currentColor;
 }
 /* ---------------------Footer-subscribe--------------- */
-.sing-up-form {
+.sign-up-wrap {
   display: flex;
   flex-direction: column;
   margin-left: 93px;
+}
+.sign-up-form {
+  display: flex;
 }
 .sign-up-text {
   margin-bottom: 20px;
@@ -769,18 +772,26 @@ img {
   text-transform: uppercase;
   color: var(--white-color);
 }
-/* .sign-up-input {
+.sign-up-input {
   display: flex;
   width: 358px;
   height: 50px;
-  border: none;
+  outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-} */
+  color: var(--white-color);
+  padding-left: 16px;
+  margin-right: 12px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sign-up-input:hover,
+.sign-up-input:focus {
+  border-color: var(--blue-text-color);
+}
 
-.sing-up-btn {
+.sign-up-btn {
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -808,9 +819,10 @@ img {
 .sign-up-btn:focus {
   background-color: var(--bg-btn-color);
 }
-.sing-up-icon {
+.sign-up-icon {
   fill: var(--white-color);
 }
+
 /* ------------------------------PORTFOLIO--------------------- */
 
 /* ------------------------------Filter------------------------ */
